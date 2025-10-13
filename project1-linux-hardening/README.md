@@ -1,4 +1,7 @@
-# Project 1 – Linux Hardening
+
+# Project 1 — Linux Hardening
+Part of my [AI-Driven Cybersecurity Roadmap](../README.md)  
+Goal: secure a local Linux workstation by auditing, reducing services, and verifying firewall & intrusion protection.
 
 ## Objective
 Secure my Linux workstation by configuring SSH, UFW, and Fail2Ban, and auditing open ports.
