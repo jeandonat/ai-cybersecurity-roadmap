@@ -62,5 +62,30 @@ Strengthen the security posture of my Linux system by:
 - Proper documentation and version control (Git) are as important as the configuration itself.
 
 ---
+---
+
+## 🧩 Summary
+
+**System state before:**  
+- Open local port 631/tcp (CUPS printing service)  
+- No firewall rules or intrusion prevention enabled  
+
+**Actions taken:**  
+- Disabled CUPS service and verified port closure  
+- Configured and activated UFW firewall (deny incoming, allow outgoing)  
+- Installed and verified Fail2Ban for brute-force protection  
+- Automated audits via `security_audit.sh`  
+- Documented all outputs and screenshots in this repository  
+
+**System state after:**  
+- All TCP ports closed  
+- Firewall enforcing inbound policy  
+- Intrusion prevention active  
+- Attack surface reduced to zero external exposure  
+
+✅ **Result:** Linux workstation fully hardened and documented as part of my AI-Driven Cybersecurity Roadmap.
+
+---
+
 
 📅 **Completion Date:** October 2025  
