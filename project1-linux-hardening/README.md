@@ -29,6 +29,11 @@ Secure my Linux workstation by configuring SSH, UFW, and Fail2Ban, and auditing 
 - `port_scan_nmap.txt`
 - `system_audit_report.txt`
 - Screenshots in `/screenshots`
+- | Proof | Description |
+|-------|--------------|
+| [ufw_status.txt](./ufw_status.txt) | Firewall rules (deny incoming, allow outgoing) |
+| ![UFW Status](./screenshots/screenshot_ufw_status.png) | Screenshot of UFW enabled |
+
 
 ## Lessons Learned
 Short note about what you discovered or improved.
