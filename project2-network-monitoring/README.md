@@ -85,7 +85,7 @@ tcpdump is ideal for quick command-line captures; Wireshark provides deep inspec
 ---
 
 
-##Summary
+## Summary
 
 Network monitoring confirms the hardened system communicates normally with external services using secure protocols.
 Baseline logs and packet captures are stored in the repository for future comparison during threat-detection exercises.
@@ -99,3 +99,4 @@ Normal DNS, TCP, UDP, and QUIC activity was recorded and analyzed.
 The capture established a baseline of legitimate network behavior, which will be used as reference data for future anomaly and threat detection exercises.
 Next step: move from passive network visibility to automated alerting (Project 3 – Intrusion Detection).
 
+Next step: move from passive network visibility to automated alerting (Project 3 – Intrusion Detection).
