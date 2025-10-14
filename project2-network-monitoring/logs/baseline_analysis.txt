@@ -1,0 +1,13 @@
+Baseline traffic capture summary (tcpdump)
+-------------------------------------------
+Date: [insert date/time]
+Interface: any
+
+Observed traffic types:
+- DNS queries to 127.0.0.53 resolving web.whatsapp.com
+- HTTPS (TCP 443) sessions with remote host 54.38.164.88
+- QUIC (UDP 443) sessions with 157.240.17.60 (WhatsApp CDN)
+- ICMP port unreachable responses (normal internal)
+
+Conclusion:
+System shows normal encrypted web and messaging traffic, no abnormal connections.
