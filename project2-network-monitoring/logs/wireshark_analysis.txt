@@ -1,0 +1,15 @@
+Wireshark Analysis Summary
+---------------------------
+File: baseline_traffic.pcap
+
+Key findings:
+- DNS requests observed for web.whatsapp.com (UDP 53)
+- QUIC (UDP 443) and HTTPS (TCP 443) traffic to 157.240.17.60 and 54.38.164.88
+- Standard TCP handshakes (SYN, ACK) confirm normal outbound HTTPS connections
+- No suspicious ports or repeated failed connections
+
+Filters used:
+- dns
+- udp
+- tcp.port == 443
+- ip.addr == 127.0.0.53
