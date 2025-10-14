@@ -1,11 +1,11 @@
-# 🛡️ Project 1 — Linux Hardening
+# Project 1 — Linux Hardening
 *Part of my [AI-Driven Cybersecurity Roadmap](../README.md)*  
 
 **Goal:** Secure a local Linux workstation by auditing, reducing services, and verifying firewall & intrusion protection.
 
 ---
 
-## 🎯 Objective
+## Objective
 Strengthen the security posture of my Linux system by:
 - Configuring SSH securely (disable root login, password auth)
 - Applying firewall rules with UFW
@@ -14,7 +14,7 @@ Strengthen the security posture of my Linux system by:
 
 ---
 
-## 🧰 Tools Used
+## Tools Used
 - **UFW** – uncomplicated firewall configuration  
 - **SSH** – secure remote access and configuration  
 - **Fail2Ban** – protection against brute-force attempts  
@@ -23,7 +23,7 @@ Strengthen the security posture of my Linux system by:
 
 ---
 
-## 🧩 Steps Performed
+## Steps Performed
 1. Scanned open ports with `sudo nmap -sS localhost`  
 2. Disabled root SSH login and password authentication  
 3. Configured UFW rules:
@@ -36,11 +36,11 @@ Strengthen the security posture of my Linux system by:
 
 ---
 
-## ✅ Results
-- 🟢 Firewall active and enforcing inbound rules  
-- 🔐 SSH hardened (no root/password access)  
-- 🧱 Intrusion prevention active (Fail2Ban)  
-- 🚫 All unnecessary services disabled and ports closed  
+##  Results
+- Firewall active and enforcing inbound rules  
+- SSH hardened (no root/password access)  
+- Intrusion prevention active (Fail2Ban)  
+- All unnecessary services disabled and ports closed  
 
 ---
 
@@ -55,7 +55,7 @@ Strengthen the security posture of my Linux system by:
 
 ---
 
-## 💡 Lessons Learned
+##  Lessons Learned
 - The default Ubuntu install exposes minimal ports, but disabling local print services (CUPS) further reduces the attack surface.  
 - UFW’s simplicity makes it ideal for quick host-level protection.  
 - Fail2Ban adds a crucial detection and response layer against brute-force attempts.  
@@ -64,7 +64,7 @@ Strengthen the security posture of my Linux system by:
 ---
 ---
 
-## 🧩 Summary
+## Summary
 
 **System state before:**  
 - Open local port 631/tcp (CUPS printing service)  
@@ -83,9 +83,9 @@ Strengthen the security posture of my Linux system by:
 - Intrusion prevention active  
 - Attack surface reduced to zero external exposure  
 
-✅ **Result:** Linux workstation fully hardened and documented as part of my AI-Driven Cybersecurity Roadmap.
+**Result:** Linux workstation fully hardened and documented as part of my AI-Driven Cybersecurity Roadmap.
 
 ---
 
 
-📅 **Completion Date:** October 2025  
+**Completion Date:** October 2025  
