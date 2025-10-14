@@ -1,13 +1,6 @@
 # AI-Driven Cybersecurity Roadmap
 *A practical, hands-on path from securing your own box to a working mini-SOC — with AI where it helps most.*
 
-[![Made with Linux](https://img.shields.io/badge/OS-Ubuntu_24.04-informational)](#prerequisites)
-[![Time](https://img.shields.io/badge/Time-~100–120h-blue)](#timeline)
-[![Focus](https://img.shields.io/badge/Daily-~2h-brightgreen)](#how-to-use-this-roadmap)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](#license)
-
----
-
 ## Repository structure
 ai-cybersecurity-roadmap/
 ├─ project1-secure-linux-workstation/
