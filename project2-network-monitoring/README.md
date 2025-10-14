@@ -97,3 +97,5 @@ No unusual or unauthorized connections detected.
 
 Normal DNS, TCP, UDP, and QUIC activity was recorded and analyzed.
 The capture established a baseline of legitimate network behavior, which will be used as reference data for future anomaly and threat detection exercises.
+Next step: move from passive network visibility to automated alerting (Project 3 – Intrusion Detection).
+
