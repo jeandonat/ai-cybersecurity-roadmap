@@ -1,20 +1,6 @@
 # AI-Driven Cybersecurity Roadmap
 *A practical, hands-on path from securing your own box to a working mini-SOC — with AI where it helps most.*
 
-## Repository structure
-ai-cybersecurity-roadmap/
-├─ project1-secure-linux-workstation/
-├─ project2-network-visibility-monitoring/
-├─ project3-local-vulnerability-scanning/
-├─ project4-siem-wazuh/
-├─ project5-mini-soc-simulation/
-├─ project6-python-security-automation/
-├─ project7-ai-enhanced-threat-detection/
-├─ project8-cloud-container-security/
-└─ project9-final-soc-integration-reporting/
-
----
-
 ## Projects (overview & deliverables)
 
 1. **Secure Your Linux Workstation**  
