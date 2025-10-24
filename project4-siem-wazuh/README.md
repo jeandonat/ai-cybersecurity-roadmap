@@ -1,19 +1,15 @@
-# Project 4 — Log Analysis & SIEM (Wazuh)
+## Project 4 — Log Analysis & SIEM (Wazuh)
 
-Goal: collect & analyze security logs (auth, FIM, process) with Wazuh.
+**Goal:** Collect and analyze security logs (auth, FIM, process) using your native Wazuh 4.9 LTS setup.
 
-## Quick Start
-- Bring up Wazuh:
-  mkdir -p ~/wazuh && cd ~/wazuh
-  curl -sLO https://packages.wazuh.com/4.7/docker-compose.yml
-  docker compose -f docker-compose.yml -p wazuh up -d  # UI: https://127.0.0.1:5601
+### Quick Start (Manager Already Installed natively)
 
-- Install agent (Ubuntu host):
-  curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo apt-key add -
-  echo "deb https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
-  sudo apt update && sudo apt install -y wazuh-agent
-  sudo sed -i 's#<address>.*</address>#<address>127.0.0.1</address>#' /var/ossec/etc/ossec.conf
-  sudo systemctl enable --now wazuh-agent
+Install the agent on your Ubuntu host:
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo apt-key add -
+echo "deb https://packages.wazuh.com/4.9/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+sudo apt update && sudo apt install -y wazuh-agent
+sudo sed -i 's#<address>.*</address>#<address>127.0.0.1</address>#' /var/ossec/etc/ossec.conf
+sudo systemctl enable --now wazuh-agent
 
 ## Generate Sample Events
 # failed SSH attempts
