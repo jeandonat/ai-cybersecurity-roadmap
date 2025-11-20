@@ -1,40 +1,37 @@
+
 # Project 5 – Mini SOC Simulation
 
----
-
 ## 🎯 Objective
-Combine your scanner, monitoring, and SIEM tools into a cohesive **local Security Operations Center (SOC)**.  
-Simulate attacks (e.g. nmap scans, brute-force attempts) and build **automated response scripts** to detect, alert, and react.
+Build a **local Security Operations Center (SOC)** using your existing tools — combining scanning, monitoring, and SIEM analytics to detect, correlate, and respond to simulated cyber-attacks in real time.
 
-Duration ≈ 20 hours
-
----
-
-## 🧩 Scope & Deliverables
-| Component | Description | Tools / Tech |
-|------------|--------------|---------------|
-| **Attack Simulation** | Generate network noise (port scans, brute-force, etc.) | `nmap`, `hydra`, `hping3` |
-| **Detection** | Capture and analyze alerts in your SIEM | Wazuh / Splunk |
-| **Response Automation** | Block malicious IPs or trigger notifications | Bash / Python / UFW |
-| **Documentation** | Architecture, screenshots, runbook | Markdown + Images |
-
-Deliverables:
-- Local Mini-SOC architecture diagram  
-- Working attack simulation script  
-- Auto-response mechanism  
-- Dashboard screenshots showing alerts  
-- Complete runbook for incident workflow
+This stage transitions your lab from passive log collection (Project 4) to **active defense and threat response**.
 
 ---
 
-## ⚙️ Setup Instructions
+## 🧩 Environment Overview
 
-1. **Ensure Projects 1–4 are complete:**
-   - Hardened Linux environment (UFW, Fail2Ban, no root SSH)
-   - Active network monitoring (`tcpdump`, `Wireshark`)
-   - Vulnerability scanner (OpenVAS or Nessus)
-   - Configured SIEM (Wazuh or Splunk)
+| Component | Role | OS / Version | Environment | Notes |
+|------------|------|--------------|--------------|--------|
+| **Wazuh VM** | SIEM Manager + Dashboard + Indexer | Ubuntu 22.04 LTS (OVA v4.14) | VirtualBox – Bridged Adapter | Central log correlation and alerting |
+| **Kali VM** | Attacker / Red-Team | Kali 2025.3 x64 | VirtualBox – Bridged Adapter | Generates scans and attacks |
+| **Host Machine** | Analyst / SOC Operator | Ubuntu 24.04 LTS | Native | Access to dashboard and scripts |
 
-2. **Clone or pull latest repo:**
-   ```bash
-   git pull origin main
+---
+
+## ⚙️ Prerequisites
+Make sure you’ve completed:
+- **Project 1 – Linux Hardening**
+- **Project 2 – Network Monitoring**
+- **Project 3 – Vulnerability Scanning**
+- **Project 4 – Log Analysis & SIEM**
+
+The **Wazuh VM** should already have the **Kali agent** connected and reporting successfully.
+
+---
+
+## 🚀 Step 1 – Attack Simulations (from Kali)
+
+### 🔍 1. Network Reconnaissance
+Simulate a port scan against the Wazuh server.
+```bash
+sudo nmap -sS -T4 192.168.1.110
