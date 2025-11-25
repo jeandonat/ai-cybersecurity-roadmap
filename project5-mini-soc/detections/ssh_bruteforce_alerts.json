@@ -1,0 +1,7 @@
+{
+  "agent": "kali",
+  "rule": 5710,
+  "description": "sshd: authentication failure",
+  "attempts": 5,
+  "src_ip": "127.0.0.1"
+}

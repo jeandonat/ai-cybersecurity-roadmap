@@ -1,0 +1,6 @@
+{
+  "agent": "kali",
+  "rule": 550,
+  "file": "/etc/hosts",
+  "change": "modified"
+}
