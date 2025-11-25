@@ -1,0 +1,18 @@
+import json
+
+def score(e):
+    s=0
+    s+=e.get("malicious",0)*5
+    s+=e.get("suspicious",0)*3
+    s+=min(e.get("total_failures",0),5)
+    return min(s,10)
+
+def rec(s):
+    if s>=8: return "BLOCK IP, escalate"
+    if s>=5: return "Investigate"
+    return "Low severity"
+
+if __name__=="__main__":
+    ex={"ip":"1.2.3.4","malicious":1,"suspicious":0,"total_failures":3}
+    sev=score(ex)
+    print(json.dumps({"event":ex,"score":sev,"action":rec(sev)},indent=4))
