@@ -1,1 +1,14 @@
 
+
+This model can later be used in automated SOC pipelines (Step 8–9), for example:
+
+- flagging suspicious IPs  
+- scoring login events  
+- enriching Wazuh alerts with ML-based severity  
+
+---
+
+## ▶ Requirements
+
+Install dependencies (inside your virtual environment):
+
