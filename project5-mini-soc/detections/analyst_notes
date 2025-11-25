@@ -1,0 +1,7 @@
+# Analyst Notes
+
+## SSH Brute-force
+Detected 5 failed attempts.
+
+## FIM Change
+Modification of /etc/hosts detected.
