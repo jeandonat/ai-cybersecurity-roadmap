@@ -1,38 +1,31 @@
 # Step 7 — AI-Enhanced Threat Detection
 
-This project contains a machine-learning workflow designed to identify malicious activity in authentication logs. It expands previous steps by adding dataset creation, supervised and unsupervised models, and evaluation metrics such as ROC and Precision-Recall curves.
+This project introduces a machine-learning workflow designed to detect malicious authentication activity.  
+It builds on the parsed log data created earlier in the roadmap, then generates a synthetic dataset that 
+allows supervised and unsupervised models to learn patterns of malicious vs. benign behavior.
+
+The notebook trains multiple ML models, evaluates them using ROC and Precision-Recall curves, and exports a
+trained classifier for later SOC automation.
+
+---
 
 ## Components
 
-### anomaly_detection.ipynb
-A Jupyter notebook that:
-- Loads parsed authentication logs
-- Builds feature and label datasets
-- Uses VirusTotal reputation results to assign benign/malicious labels
-- Trains supervised models (Logistic Regression, Random Forest)
-- Trains an unsupervised anomaly detection model (Isolation Forest)
-- Generates ROC and Precision-Recall curves
-- Saves a trained ML model
+### 🧪 anomaly_detection.ipynb
+A Jupyter Notebook that:
 
-## Data Files
+- Loads authentication log features & labels  
+- Trains supervised models:
+  - Logistic Regression  
+  - Random Forest  
+- Trains an unsupervised anomaly detector:
+  - Isolation Forest  
+- Generates:
+  - ROC Curve (`roc_curve.png`)  
+  - Precision–Recall Curve (`pr_curve.png`)  
+- Saves a trained ML model (`anomaly_model.pkl`)
 
-Located in the `data/` directory:
-- auth_log_parsed.csv — Parsed authentication log entries
-- features.csv — Numerical feature dataset
-- labels.csv — Class labels (0 = benign, 1 = malicious)
+---
 
-## Model Artifacts
-
-Located in the `models/` directory:
-- anomaly_model.pkl — Exported trained model
-
-## Evaluation Charts
-
-Located in the `charts/` directory:
-- roc_curve.png — ROC curve for supervised models
-- pr_curve.png — Precision-Recall curve
-
-## Requirements
-
-Install dependencies:
+## 📁 Project Structure
 
