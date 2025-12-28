@@ -1,0 +1,8 @@
+# Trigger Falco rule "Terminal shell in container"
+sudo docker run --rm -it alpine sh
+id
+exit
+
+# Verify on manager
+sudo grep -F "Falco: Terminal shell in container" /var/ossec/logs/alerts/alerts.json | tail -n 3
+
