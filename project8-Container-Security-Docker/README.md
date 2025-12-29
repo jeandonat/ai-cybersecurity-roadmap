@@ -2,8 +2,10 @@
 
 ⭐ Featured: Recruiter highlights
 
-Falco → Wazuh alert (MITRE T1059) (Container shell detection, custom Wazuh rule 100500)
-→ project8-container-security/falco-runtime-detection/
+**Interactive shell spawned inside a container → detected by Falco → ingested by Wazuh agent (002) → correlated by custom rule `100500` (level 12) → visible in Wazuh Dashboard with MITRE mapping (`T1059`).**
+➡️ **Write-up / files:** [Falco runtime detection](project8-container-security-docker/step8-falco-runtime-detection/)
+
+![Falco alert in Wazuh](screenshots/01-alert-event-details.png)
 
 
 <img width="1717" height="1289" alt="01-alert-event-details" src="https://github.com/user-attachments/assets/30625209-a3f0-4b5a-97fc-7d9dd55fb55b" />
