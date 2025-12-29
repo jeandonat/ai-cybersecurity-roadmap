@@ -5,6 +5,8 @@
 Falco → Wazuh alert (MITRE T1059) (Container shell detection, custom Wazuh rule 100500)
 → project8-container-security/falco-runtime-detection/
 
+https://github.com/jeandonat/ai-cybersecurity-roadmap/blob/main/project8-Container-Security-Docker/01-alert-event-details.png
+
 ## Goal
 Detect interactive shells spawned inside containers (Falco) and surface them as correlated alerts in Wazuh Dashboard,
 mapped to MITRE ATT&CK.
