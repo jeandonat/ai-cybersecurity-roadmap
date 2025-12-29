@@ -1,6 +1,16 @@
 # AI-Driven Cybersecurity Roadmap
 *A practical, hands-on path from securing your own box to a working mini-SOC — with AI where it helps most.*
 
+## ⭐ Featured (Recruiter proof)
+
+**Falco runtime detection → Wazuh alert (MITRE T1059)**  
+Interactive shell spawned inside a container → detected by Falco → ingested by Wazuh agent (**002**) → correlated by custom rule **100500** (level 12) → visible in Wazuh Dashboard.
+
+➡️ [Open Project 8 – Container Security (Docker)](project8-Container-Security-Docker/)  
+➡️ [Open Step 8 write-up / files](project8-Container-Security-Docker/step8-falco-runtime-detection/)
+
+![Falco alert in Wazuh](project8-Container-Security-Docker/01-alert-event-details.png)
+
 ## Projects (overview & deliverables)
 
 1. **Secure Your Linux Workstation**  
@@ -34,7 +44,7 @@
    Train simple models (e.g., scikit-learn) on logs; flag anomalies.  
    **Deliverables:** notebook(s), model artifacts, ROC/PR chart.
 
-8. **Cloud & Container Security**  
+8. **Container Security (Docker)**  
    Run DVWA in Docker; scan with Trivy; runtime rules with Falco.  
    **Deliverables:** Trivy SARIF/HTML, Falco alerts, remediation notes.
 
