@@ -21,10 +21,10 @@ mapped to MITRE ATT&CK.
 
 ## Evidence (screenshots)
 1. **Alert details (Threat Hunting):** agent 002 + rule.id 100500 + level 12 + MITRE T1059  
-   ![Falco alert in Wazuh](screenshots/01-alert-event-details.png)
+   ![Falco alert in Wazuh]
 
 2. **Custom rule (Rules view):** correlation rule definition + MITRE mapping  
-   ![Wazuh rule 100500](screenshots/02-rule-100500.png)
+   ![Wazuh rule 100500]
 
 ## Configuration
 
