@@ -1,33 +1,16 @@
-<<<<<<< Updated upstream
-# Step 8 — Falco Runtime Detection → Wazuh Alert (MITRE T1059)
-
-⭐ Featured: Recruiter highlights
-
-**Interactive shell spawned inside a container → detected by Falco → ingested by Wazuh agent (002) → correlated by custom rule `100500` (level 12) → visible in Wazuh Dashboard with MITRE mapping (`T1059`).**
-➡️ **Write-up / files:** [Falco runtime detection]
-
-
-
-<img width="900" height="600" alt="01-alert-event-details" src="https://github.com/user-attachments/assets/30625209-a3f0-4b5a-97fc-7d9dd55fb55b" />
-
-## Goal
-Detect interactive shells spawned inside containers (Falco) and surface them as correlated alerts in Wazuh Dashboard,
-mapped to MITRE ATT&CK.
-=======
 # Project 8 — Container Security (Falco → Wazuh + DVWA + Trivy)
 
 ## Recruiter proof (runtime detection → SIEM)
 Falco detected suspicious container activity and it **landed as a Wazuh alert** (custom rule **100500**).
 
+<img width="900" height="600" alt="01-alert-event-details" src="https://github.com/user-attachments/assets/30625209-a3f0-4b5a-97fc-7d9dd55fb55b" />
 
 ---
-<img width="900" height="600" alt="01-alert-event-details" src="https://github.com/user-attachments/assets/30625209-a3f0-4b5a-97fc-7d9dd55fb55b" />
 
 This project demonstrates **two complementary layers** of container security in a lab:
 
 1) **Runtime detection (behavioral):** Falco detects suspicious container activity and forwards it into Wazuh.
 2) **Vulnerability scanning (pre-runtime):** Trivy scans the DVWA container image and produces a vulnerability report.
-
 
 ## Step 8A — Falco runtime detection → Wazuh (recruiter proof)
 **What it proves:** A container runtime event is detected by Falco and becomes a searchable Wazuh alert.
@@ -51,9 +34,9 @@ This project demonstrates **two complementary layers** of container security in 
 - This increases the likelihood of **unpatched known vulnerabilities** in base packages.
 
 **Evidence:**
-- Exec summary: `reports/00-trivy-exec-summary.txt`
-- HIGH/CRITICAL: `reports/01-trivy-high-critical.txt`
-- Full JSON: `reports/02-trivy-report.json`
+- Exec summary: `step8-dvwa-trivy-vuln-scanning/reports/00-trivy-exec-summary.txt`
+- HIGH/CRITICAL: `step8-dvwa-trivy-vuln-scanning/reports/01-trivy-high-critical.txt`
+- Full JSON: `step8-dvwa-trivy-vuln-scanning/reports/02-trivy-report.json`
 
 ### Mitigations (real-world pattern)
 Even in a lab, the correct operational pattern is:
@@ -61,7 +44,7 @@ Even in a lab, the correct operational pattern is:
 - Rebuild regularly and pin versions; treat EOL base images as a risk signal.
 - Keep DVWA **local-only / segmented** and never expose it publicly.
 
->>>>>>> Stashed changes
+---
 
 ## Lab setup
 - **Wazuh Manager (VM):** `wazuh-server`
@@ -71,10 +54,14 @@ Even in a lab, the correct operational pattern is:
 
 ## Evidence (screenshots)
 1. **Alert details (Threat Hunting):** agent 002 + rule.id 100500 + level 12 + MITRE T1059  
-   ![Falco alert in Wazuh]
+   - `step8-falco-runtime-detection/screenshots/01-alert-event-details.png`
 
 2. **Custom rule (Rules view):** correlation rule definition + MITRE mapping  
-   ![Wazuh rule 100500]
+   - `step8-falco-runtime-detection/screenshots/02-rule-100500.png`
+
+3. **DVWA running (docker ps + UI):** local-only exposure on 127.0.0.1:8081  
+   - `step8-dvwa-trivy-vuln-scanning/screenshots/01-docker-ps-dvwa.png`
+   - `step8-dvwa-trivy-vuln-scanning/screenshots/03-dvwa-home-logged-in.png`
 
 ## Configuration
 
@@ -84,13 +71,3 @@ Falco writes JSON events to:
 
 ### Wazuh agent ingestion (ubuntu-docker-host)
 Configured `ossec.conf` to ingest Falco JSON:
-
-<<<<<<< Updated upstream
-```xml
-<localfile>
-  <log_format>json</log_format>
-  <location>/var/log/falco.json</location>
-</localfile>
-=======
-
->>>>>>> Stashed changes
