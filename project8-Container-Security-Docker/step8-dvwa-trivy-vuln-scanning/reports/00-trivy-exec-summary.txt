@@ -1,0 +1,33 @@
+=== Trivy context ===
+
+=== HIGH/CRITICAL (first 30 lines) ===
+
+vulnerables/web-dvwa:latest (debian 9.5)
+========================================
+Total: 805 (HIGH: 551, CRITICAL: 254)
+
+┌──────────────────────────┬──────────────────┬──────────┬──────────────┬─────────────────────────────┬────────────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│         Library          │  Vulnerability   │ Severity │    Status    │      Installed Version      │           Fixed Version            │                            Title                             │
+├──────────────────────────┼──────────────────┼──────────┼──────────────┼─────────────────────────────┼────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ apache2                  │ CVE-2019-10082   │ CRITICAL │ fixed        │ 2.4.25-3+deb9u5             │ 2.4.25-3+deb9u8                    │ httpd: read-after-free in h2 connection shutdown             │
+│                          │                  │          │              │                             │                                    │ https://avd.aquasec.com/nvd/cve-2019-10082                   │
+│                          ├──────────────────┤          │              │                             ├────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-26691   │          │              │                             │ 2.4.25-3+deb9u10                   │ httpd: mod_session: Heap overflow via a crafted              │
+│                          │                  │          │              │                             │                                    │ SessionHeader value                                          │
+│                          │                  │          │              │                             │                                    │ https://avd.aquasec.com/nvd/cve-2021-26691                   │
+│                          ├──────────────────┤          │              │                             ├────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-39275   │          │              │                             │ 2.4.25-3+deb9u11                   │ httpd: Out-of-bounds write in ap_escape_quotes() via         │
+│                          │                  │          │              │                             │                                    │ malicious input                                              │
+│                          │                  │          │              │                             │                                    │ https://avd.aquasec.com/nvd/cve-2021-39275                   │
+│                          ├──────────────────┤          │              │                             │                                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-40438   │          │              │                             │                                    │ httpd: mod_proxy: SSRF via a crafted request uri-path        │
+│                          │                  │          │              │                             │                                    │ containing "unix:"                                           │
+│                          │                  │          │              │                             │                                    │ https://avd.aquasec.com/nvd/cve-2021-40438                   │
+│                          ├──────────────────┤          │              │                             ├────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-44790   │          │              │                             │ 2.4.25-3+deb9u12                   │ httpd: mod_lua: Possible buffer overflow when parsing        │
+│                          │                  │          │              │                             │                                    │ multipart content                                            │
+│                          │                  │          │              │                             │                                    │ https://avd.aquasec.com/nvd/cve-2021-44790                   │
+│                          ├──────────────────┤          │              │                             ├────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2022-22720   │          │              │                             │ 2.4.25-3+deb9u13                   │ httpd: Errors encountered during the discarding of request   │
+│                          │                  │          │              │                             │                                    │ body lead to HTTP...                                         │
+│                          │                  │          │              │                             │                                    │ https://avd.aquasec.com/nvd/cve-2022-22720                   │

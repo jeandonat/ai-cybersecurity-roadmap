@@ -1,0 +1,5 @@
+# DVWA running proof
+docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+docker inspect dvwa --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
+# Expected: dvwa on 127.0.0.1:8081->80 and an internal bridge IP (e.g., 172.21.0.2)
+
