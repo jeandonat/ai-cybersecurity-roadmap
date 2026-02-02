@@ -8,6 +8,7 @@ Interactive shell spawned inside a container → detected by Falco → ingested 
 
 ➡️ [Open Project 9 – Final SOC Integration & Reporting](project9-final-soc-integration-reporting)  
 ➡️ [Open Incident Report (md)](project9-final-soc-integration-reporting/report/incident_report_container_shell.md)
+
 ➡️ [Open Executive Summary (md)](project9-final-soc-integration-reporting/report/executive_summary.md)
 
 ![Falco alert in Wazuh](project8-Container-Security-Docker/01-alert-event-details.png)
