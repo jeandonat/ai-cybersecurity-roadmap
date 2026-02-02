@@ -11,6 +11,7 @@ Interactive shell spawned inside a container → detected by Falco → ingested 
 
 ➡️ [Open Executive Summary (md)](project9-final-soc-integration-reporting/report/executive_summary.md)
 
+Wazuh Alert View — Falco Runtime Detection Correlated with Host Context
 ![Falco alert in Wazuh](project8-Container-Security-Docker/01-alert-event-details.png)
 
 ## Projects (overview & deliverables)
