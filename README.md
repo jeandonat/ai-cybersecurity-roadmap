@@ -7,7 +7,7 @@
 Interactive shell spawned inside a container → detected by Falco → ingested by Wazuh agent (**002**) → correlated by custom rule **100500** (level 12) → visible in Wazuh Dashboard.
 
 ➡️ [Open Project 9 – Final SOC Integration & Reporting](project9-final-soc-integration-reporting)  
-➡️ [Open Step 8 write-up / files](project8-Container-Security-Docker/step8-falco-runtime-detection/)
+➡️ [Open Incident Report (md)](project9-final-soc-integration-reporting/report/incident_report_container_shell.md)
 
 ![Falco alert in Wazuh](project8-Container-Security-Docker/01-alert-event-details.png)
 
