@@ -6,7 +6,7 @@
 **Falco runtime detection → Wazuh alert (MITRE T1059)**  
 Interactive shell spawned inside a container → detected by Falco → ingested by Wazuh agent (**002**) → correlated by custom rule **100500** (level 12) → visible in Wazuh Dashboard.
 
-➡️ [Open Project 8 – Container Security (Docker)](project8-Container-Security-Docker/)  
+➡️ [Open Project 9 – Final SOC Integration & Reporting]([project8-Container-Security-Docker/](https://github.com/jeandonat/ai-cybersecurity-roadmap/commit/056704cd3641748753cf2eccbc0ab2a36314c421))  
 ➡️ [Open Step 8 write-up / files](project8-Container-Security-Docker/step8-falco-runtime-detection/)
 
 ![Falco alert in Wazuh](project8-Container-Security-Docker/01-alert-event-details.png)
